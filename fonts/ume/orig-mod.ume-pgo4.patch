@@ -1,0 +1,86 @@
+--- ume-pgo4.ttx	2021-10-06 19:17:13.645255431 +0900
++++ mod.ume-pgo4.ttx	2021-10-06 19:29:13.446270075 +0900
+@@ -1434185,8 +1434185,12 @@
+     <namerecord nameID="0" platformID="1" platEncID="0" langID="0x411" unicode="True">
+       Author: HORAI Wataru. License: This font is a free software. Unlimited permission is granted to use, copy, and distribute it, with or without modification, either commercially and noncommercially. THIS FONT IS PROVIDED "AS IS" WITHOUT WARRANTY.
+     </namerecord>
++    <!--
++      NameID=1 (Family)
++      https://adobe-type-tools.github.io/font-tech-notes/pdfs/5149.OTFname_Tutorial.pdf
++    -->
+     <namerecord nameID="1" platformID="1" platEncID="0" langID="0x411" unicode="True">
+-      Ume P Gothic
++      MS PGothic
+     </namerecord>
+     <namerecord nameID="2" platformID="1" platEncID="0" langID="0x411" unicode="True">
+       Regular
+@@ -1434194,8 +1434198,12 @@
+     <namerecord nameID="3" platformID="1" platEncID="0" langID="0x411" unicode="True">
+       Ume P Gothic
+     </namerecord>
++    <!--
++      NameID=4 (Full)
++      https://adobe-type-tools.github.io/font-tech-notes/pdfs/5149.OTFname_Tutorial.pdf
++    -->
+     <namerecord nameID="4" platformID="1" platEncID="0" langID="0x411" unicode="True">
+-      Ume P Gothic
++      MS PGothic
+     </namerecord>
+     <namerecord nameID="5" platformID="1" platEncID="0" langID="0x411" unicode="True">
+       Look update time of this file.
+@@ -1434209,8 +1434217,12 @@
+     <namerecord nameID="0" platformID="3" platEncID="1" langID="0x409">
+       Author: HORAI Wataru. License: This font is a free software. Unlimited permission is granted to use, copy, and distribute it, with or without modification, either commercially and noncommercially. THIS FONT IS PROVIDED "AS IS" WITHOUT WARRANTY.
+     </namerecord>
++    <!--
++      NameID=1 (Family)
++      https://adobe-type-tools.github.io/font-tech-notes/pdfs/5149.OTFname_Tutorial.pdf
++    -->
+     <namerecord nameID="1" platformID="3" platEncID="1" langID="0x409">
+-      Ume P Gothic
++      MS PGothic
+     </namerecord>
+     <namerecord nameID="2" platformID="3" platEncID="1" langID="0x409">
+       Regular
+@@ -1434218,8 +1434230,12 @@
+     <namerecord nameID="3" platformID="3" platEncID="1" langID="0x409">
+       Ume P Gothic
+     </namerecord>
++    <!--
++      NameID=4 (Full)
++      https://adobe-type-tools.github.io/font-tech-notes/pdfs/5149.OTFname_Tutorial.pdf
++    -->
+     <namerecord nameID="4" platformID="3" platEncID="1" langID="0x409">
+-      Ume P Gothic
++      MS PGothic
+     </namerecord>
+     <namerecord nameID="5" platformID="3" platEncID="1" langID="0x409">
+       Look update time of this file.
+@@ -1434233,8 +1434249,12 @@
+     <namerecord nameID="0" platformID="3" platEncID="1" langID="0x411">
+       作者: 蓬莱和多流. ライセンス: このフォントはフリー（自由な）ソフトウエアです。あらゆる改変の有無に関わらず、また商業的な利用であっても、自由に利用、複製、再配布することができますが、全て無保証とさせていただきます。
+     </namerecord>
++    <!--
++      NameID=1 (Family)
++      https://adobe-type-tools.github.io/font-tech-notes/pdfs/5149.OTFname_Tutorial.pdf
++    -->
+     <namerecord nameID="1" platformID="3" platEncID="1" langID="0x411">
+-      梅Pゴシック
++      ＭＳ Ｐゴシック
+     </namerecord>
+     <namerecord nameID="2" platformID="3" platEncID="1" langID="0x411">
+       Regular
+@@ -1434242,8 +1434262,12 @@
+     <namerecord nameID="3" platformID="3" platEncID="1" langID="0x411">
+       梅Pゴシック
+     </namerecord>
++    <!--
++      NameID=4 (Full)
++      https://adobe-type-tools.github.io/font-tech-notes/pdfs/5149.OTFname_Tutorial.pdf
++    -->
+     <namerecord nameID="4" platformID="3" platEncID="1" langID="0x411">
+-      梅Pゴシック
++      ＭＳ Ｐゴシック
+     </namerecord>
+     <namerecord nameID="5" platformID="3" platEncID="1" langID="0x411">
+       Look update time of this file.

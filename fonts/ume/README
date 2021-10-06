@@ -1,0 +1,41 @@
+Ume fonts (version 670)
+
+https://ja.osdn.net/projects/ume-font/downloads/22212/umefont_670.tar.xz/
+
+Original fonts:
+- ume-tgo4.ttf: Ume Gothic
+- ume-pgo4.ttf: Ume P Gothic
+- ume-ugo4.ttf: Ume UI Gothic
+
+Modified fonts:
+- mod.ume-tgo4.ttf: modified ume-tgo4.ttf
+- mod.ume-pgo4.ttf: modified ume-pgo4.ttf
+- mod.ume-ugo4.ttf: modified ume-ugo4.ttf
+
+work log:
+1. generate ttx file
+(generate ume-tgo4.ttx, ume-pgo4.ttx, and ume-ugo4.ttx)
+--------------------
+ttx ume-tgo4.ttf
+ttx ume-pgo4.ttf
+ttx ume-ugo4.ttf
+--------------------
+2. copy ttx file
+--------------------
+cp ume-tgo4.ttx mod.ume-tgo4.ttx
+cp ume-pgo4.ttx mod.ume-pgo4.ttx
+cp ume-ugo4.ttx mod.ume-ugo4.ttx
+--------------------
+3. edit ttx file
+--------------------
+editor mod.ume-tgo4.ttx
+editor mod.ume-pgo4.ttx
+editor mod.ume-ugo4.ttx
+--------------------
+4. generate modified ttf
+(generate mod.ume-tgo4.ttf, mod.ume-pgo4.ttf, and mod.ume-ugo4.ttf)
+--------------------
+ttx mod.ume-tgo4.ttx
+ttx mod.ume-pgo4.ttx
+ttx mod.ume-ugo4.ttx
+--------------------

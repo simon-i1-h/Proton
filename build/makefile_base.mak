@@ -344,7 +344,7 @@ $(DIST_FONTS): fonts
 	cp $(FONTS_OBJ)/*.ttf "$@"
 	cp $(FONTS_OBJ)/source-han/msyh.ttf "$@"
 	cp $(FONTS_OBJ)/source-han/simsun.ttc "$@"
-	cp $(FONTS_OBJ)/source-han/msgothic.ttc "$@"
+	cp $(FONTS_OBJ)/ume-gothic/msgothic.ttc "$@"
 	cp $(FONTS_OBJ)/source-han/malgun.ttf "$@"
 	cp $(FONTS)/noto/NotoSansArabic-Regular.ttf "$@"
 
@@ -869,29 +869,14 @@ nsimsun.ttf_UNISOURCE = $(SOURCE_HAN_SANS_SRCDIR)/UniSourceHanSansCN-UTF32-H
 nsimsun.ttf_MENUNAMEDB = $(FONTS)/patches/NSimSun-FontMenuNameDB
 nsimsun.ttf = $(FONTS_OBJ)/source-han/nsimsun.ttf
 
-msgothic.ttf_CIDFONTINFO = $(SOURCE_HAN_SANS_SRCDIR)/cidfontinfo.OTC.J
-msgothic.ttf_CIDFONT = $(SOURCE_HAN_SANS_SRCDIR)/cidfont.ps.OTC.J
-msgothic.ttf_FEATURES = $(SOURCE_HAN_SANS_SRCDIR)/features.OTC.J
-msgothic.ttf_SEQUENCES = $(SOURCE_HAN_SANS_SRCDIR)/SourceHanSans_JP_sequences.txt
-msgothic.ttf_UNISOURCE = $(SOURCE_HAN_SANS_SRCDIR)/UniSourceHanSansJP-UTF32-H
-msgothic.ttf_MENUNAMEDB = $(FONTS)/patches/MSGothic-FontMenuNameDB
-msgothic.ttf = $(FONTS_OBJ)/source-han/msgothic.ttf
+msgothic.ttf_FONT = $(FONTS)/ume/mod.ume-tgo4.ttf
+msgothic.ttf = $(FONTS_OBJ)/ume-gothic/msgothic.ttf
 
-mspgothic.ttf_CIDFONTINFO = $(SOURCE_HAN_SANS_SRCDIR)/cidfontinfo.OTC.J
-mspgothic.ttf_CIDFONT = $(SOURCE_HAN_SANS_SRCDIR)/cidfont.ps.OTC.J
-mspgothic.ttf_FEATURES = $(SOURCE_HAN_SANS_SRCDIR)/features.OTC.J
-mspgothic.ttf_SEQUENCES = $(SOURCE_HAN_SANS_SRCDIR)/SourceHanSans_JP_sequences.txt
-mspgothic.ttf_UNISOURCE = $(SOURCE_HAN_SANS_SRCDIR)/UniSourceHanSansJP-UTF32-H
-mspgothic.ttf_MENUNAMEDB = $(FONTS)/patches/MSPGothic-FontMenuNameDB
-mspgothic.ttf = $(FONTS_OBJ)/source-han/mspgothic.ttf
+mspgothic.ttf_FONT = $(FONTS)/ume/mod.ume-pgo4.ttf
+mspgothic.ttf = $(FONTS_OBJ)/ume-gothic/mspgothic.ttf
 
-msuigothic.ttf_CIDFONTINFO = $(SOURCE_HAN_SANS_SRCDIR)/cidfontinfo.OTC.J
-msuigothic.ttf_CIDFONT = $(SOURCE_HAN_SANS_SRCDIR)/cidfont.ps.OTC.J
-msuigothic.ttf_FEATURES = $(SOURCE_HAN_SANS_SRCDIR)/features.OTC.J
-msuigothic.ttf_SEQUENCES = $(SOURCE_HAN_SANS_SRCDIR)/SourceHanSans_JP_sequences.txt
-msuigothic.ttf_UNISOURCE = $(SOURCE_HAN_SANS_SRCDIR)/UniSourceHanSansJP-UTF32-H
-msuigothic.ttf_MENUNAMEDB = $(FONTS)/patches/MSUIGothic-FontMenuNameDB
-msuigothic.ttf = $(FONTS_OBJ)/source-han/msuigothic.ttf
+msuigothic.ttf_FONT = $(FONTS)/ume/mod.ume-ugo4.ttf
+msuigothic.ttf = $(FONTS_OBJ)/ume-gothic/msuigothic.ttf
 
 malgun.ttf_CIDFONTINFO = $(SOURCE_HAN_SANS_SRCDIR)/cidfontinfo.OTC.K
 malgun.ttf_CIDFONT = $(SOURCE_HAN_SANS_SRCDIR)/cidfont.ps.OTC.K
@@ -902,7 +887,7 @@ malgun.ttf_MENUNAMEDB = $(FONTS)/patches/Malgun-FontMenuNameDB
 malgun.ttf = $(FONTS_OBJ)/source-han/malgun.ttf
 
 simsun.ttc = $(FONTS_OBJ)/source-han/simsun.ttc
-msgothic.ttc = $(FONTS_OBJ)/source-han/msgothic.ttc
+msgothic.ttc = $(FONTS_OBJ)/ume-gothic/msgothic.ttc
 
 #The use of "Arial" here is for compatibility with programs that require that exact string. This font is not Arial.
 LiberationSans-Regular_NAMES := "Arial" "Arial" "Arial"
@@ -940,6 +925,10 @@ $(FONTS_OBJ)/source-han/%.ttf: $$(%.ttf_CIDFONTINFO) $$(%.ttf_CIDFONTINFO) $$(%.
 	# to step onto each other's feet
 	(TEMP_DIR=`mktemp -d` && cd $$TEMP_DIR && $(AFDKO_VERB) sfntedit -a CFF=$(abspath $($(notdir $@)).cff) $(abspath $@.tmp) && rm -fr $$TEMP_DIR)
 	mv $@.tmp $@
+
+$(FONTS_OBJ)/ume-gothic/%.ttf: $$(%.ttf_FONT)
+	mkdir -p $(FONTS_OBJ)/ume-gothic
+	cp $($(notdir $@)_FONT) $@
 
 $(simsun.ttc): $(simsun.ttf) $(nsimsun.ttf)
 	$(AFDKO_VERB) otf2otc -o $@ $^
