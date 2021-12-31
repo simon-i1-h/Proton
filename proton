@@ -589,6 +589,9 @@ class CompatData:
             ( g_proton.fonts_dir, "malgun.ttf", "malgun.ttf" ),
             ( g_proton.fonts_dir, "micross.ttf", "micross.ttf" ),
             ( g_proton.fonts_dir, "nirmala.ttf", "nirmala.ttf" ),
+            ( g_proton.fonts_dir, "ume-pgo4.ttf", "ume-pgo4.ttf" ),
+            ( g_proton.fonts_dir, "ume-tgo4.ttf", "ume-tgo4.ttf" ),
+            ( g_proton.fonts_dir, "ume-ugo4.ttf", "ume-ugo4.ttf" ),
 
             ( g_proton.wine_fonts_dir, "tahoma.ttf", "tahoma.ttf" ),
         ]
